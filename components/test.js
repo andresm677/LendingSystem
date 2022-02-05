@@ -26,8 +26,8 @@ function Test({lendings, handleSelection}) {
           <th>Ver</th>
         </tr>
         {lendings.map((todo) => (
-          <tr>
-            <td style={centerCell}>{todo.item}</td>
+          <tr key={todo.id}>
+            <td  style={centerCell}>{todo.item}</td>
             <td style={centerCell}>{todo.student_name}</td>
             <td style={centerCell}>{new Date(todo.start_date).toLocaleDateString()}</td>
             <td style={centerCell}>{new Date(todo.end_date).toLocaleDateString()}</td>
