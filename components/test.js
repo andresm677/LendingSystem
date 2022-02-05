@@ -28,6 +28,7 @@ function Test({lendings, handleSelection}) {
         {lendings.map((todo) => (
           <tr>
             <td style={centerCell}>{todo.item}</td>
+            <td style={centerCell}>{todo.student_name}</td>
             <td style={centerCell}>{new Date(todo.start_date).toLocaleDateString()}</td>
             <td style={centerCell}>{new Date(todo.end_date).toLocaleDateString()}</td>
             <td style={centerCell}>{todo.return_date == null ? '-' : new Date(todo.return_date).toLocaleDateString()}</td>
